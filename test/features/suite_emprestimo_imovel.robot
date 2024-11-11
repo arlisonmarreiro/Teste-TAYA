@@ -2,7 +2,7 @@
 Documentation     This file contains testcases for the application
 Resource          ../../config/package.robot
 Test Setup       Open Page
-# Test Teardown    Close Page
+Test Teardown    Close Page
 
 *** Test Cases ***
 

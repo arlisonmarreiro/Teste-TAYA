@@ -70,20 +70,46 @@ Copie e cole os webdrivers para o diretorio
 
 **Instruções para executar os scripts:**
 
-Para executar a suite de teste e Aquisição de imóvel basta executar os comandos.
+Para executar a suite de teste de Aquisição de imóvel basta executar os comandos.
 
-1. Esse comando abaixo vai executar todos os casos de teste da Suite de **Aquisição de imóvel**
+
+1. Esse comando vai executar todos as suítes de teste, seja Aquisição de imóvel, Empréstimo e Consórcio.
+```bash
+robot -d ./test/logs ./test/features
+```
+2. Esse comando abaixo vai executar todos os casos de teste da Suite de **Aquisição de imóvel**
 ```bash
 robot -d ./test/logs ./test/features/suite_aquisicao_imovel.robot
 ```
-2. Esses comandos vão executar casos de teste espécificos da suite, basta escolher um caso de teste.
+3. Escolha um desses comandos para executar casos de teste específicos de Aquisição de imóvel
+
+    ***Observação, cada tag depois de -i é um caso de teste, exemplo: -i verificarFormularioAquisicao é o caso de teste para verificar se o formulário aparece. Seguindo essa mesma lógica escolha um caso de teste em específico para executar, senão execute o comando ```robot -d ./test/logs ./test/features/suite_aquisicao_imovel.robot``` que irá executar todos os casos de teste da Suite de Aquisição de imóvel, ou ```robot -d ./test/logs ./test/features``` para executar todas as suítes não apenas Aquisição de imóvel.***
 ```bash
 robot -d ./test/logs -i verificarFormularioAquisicao ./test/features/suite_aquisicao_imovel.robot
 robot -d ./test/logs -i preencherFormularioAquisicao ./test/features/suite_aquisicao_imovel.robot
 robot -d ./test/logs -i validarCamposAquisicao ./test/features/suite_aquisicao_imovel.robot
 ```
-
-* **-d** significa que vai criar um diretório chamado **logs** dentro de **test** para armazenar os logs
+4. Esse comando abaixo vai executar todos os casos de teste da Suite de **Empréstimo com Garantia Imóvel**
+```bash
+robot -d ./test/logs ./test/features/suite_emprestimo_imovel.robot 
+```
+5. Escolha um desses comandos para executar casos de teste específicos de Empréstimo com Garantia Imóvel
+```bash
+robot -d ./test/logs -i verificarFormularioEmprestimo ./test/features/suite_emprestimo_imovel.robot 
+robot -d ./test/logs -i preencherFormularioEmprestimo ./test/features/suite_emprestimo_imovel.robot 
+robot -d ./test/logs -i validarCamposEmprestimo ./test/features/suite_emprestimo_imovel.robot 
+```
+6. Esse comando abaixo vai executar todos os casos de teste da Suite de **Consórcio**
+```bash
+robot -d ./test/logs ./test/features/suite_consorcio.robot 
+```
+7. Escolha um desses comandos para executar casos de teste específicos de Consórcio
+```bash
+robot -d ./test/logs -i verificarFormularioConsorcio ./test/features/suite_consorcio.robot 
+robot -d ./test/logs -i preencherFormularioConsorcio ./test/features/suite_consorcio.robot 
+robot -d ./test/logs -i validarCamposConsorcio ./test/features/suite_consorcio.robot 
+```
+* **-d** significa que vai ser criado um diretório chamado **logs** dentro de **test** para armazenar os logs
 
 * **É possivel adicionar a flag -i seguido da tag do caso de teste para executar apenas um teste em específico**
 
@@ -107,8 +133,9 @@ robot -d ./test/logs -e verificarFormularioAquisicao ./test/features/suite_aquis
 Após a execução dos testes, os relatórios podem ser encontrados no diretório logs/. Você terá acesso aos seguintes arquivos:
 
 - report.html: Relatório detalhado da execução dos testes.
-
+![alt text](./img/image-1.png)
 - log.html: Logs detalhados dos passos executados.
+![alt text](./img/image.png)
 
 - output.xml: Arquivo de saída que pode ser utilizado para integrações.
 
