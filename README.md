@@ -31,7 +31,7 @@ Para rodar os testes, é necessário ter instalado:
 
 Clone este repositório:
 
-```git clone https://github.com/arlisonmarreiro/`
+```git clone https://github.com/arlisonmarreiro/https://github.com/arlisonmarreiro/Teste-TAYA.git```
 
 #### **Instalar as dependências necessárias:**
 
@@ -66,7 +66,7 @@ Copie e cole os webdrivers para o diretorio
 
 1. **Executar Todos os Testes**
 
-**Para executar todos os casos de teste no arquivo TestCases.robot, Certifique-se que esteja dentro da raiz**
+**Para executar todos os casos de teste, Certifique-se que esteja dentro da raiz**
 
 **Instruções para executar os scripts:**
 
@@ -95,7 +95,7 @@ Aqui vai ser executado somente o caso de teste que possui a tag **verificarFormu
 ```bash
 robot -d ./test/logs -i verificarFormularioAquisicao ./test/features/suite_aquisicao_imovel.robot
 ```
-Aqui vai ser executado todos os testes menos o da tag**verificarFormularioAquisicao**
+Aqui vai ser executado todos os testes menos o da tag **verificarFormularioAquisicao**
 
 ```bash
 robot -d ./test/logs -e verificarFormularioAquisicao ./test/features/suite_aquisicao_imovel.robot
