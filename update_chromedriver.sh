@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Obter a versão do Google Chrome instalada
-CHROME_VERSION=$(google-chrome --version | grep -oP '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+\.\d+')
 
 # Montar a URL para o download do ChromeDriver correspondente
 DRIVER_URL="https://storage.googleapis.com/chrome-for-testing-public/$CHROME_VERSION/linux64/chromedriver-linux64.zip"
